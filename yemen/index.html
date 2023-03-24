@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>yemem</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#C5C5B9;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=1080" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<style>
+@font-face {
+    font-family: "Isento-Bold";
+    src: url("https://pageviews.arabnews.com/static_html/common/fonts/Isento-Medium2.woff2") format('woff');
+}
+</style>
+
+	<style>
+@font-face {
+    font-family: "Isento-Bold";
+    src: url("https://pageviews.arabnews.com/static_html/common/fonts/Isento-Medium2.woff2") format('woff');
+}
+</style>
+
+	<link href='https://fonts.googleapis.com/css?family=Libre+Caslon+Display&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin' rel='stylesheet' type='text/css'>
+	<style>
+@font-face {
+    font-family: "Isento-ExtraBold";
+    src: url("https://pageviews.arabnews.com/static_html/common/fonts/Isento-ExtraBold.woff") format('woff');
+}
+</style>
+	<style>
+@font-face {
+    font-family: "Isento-Book";
+    src: url("https://pageviews.arabnews.com/static_html/common/fonts/Isento-Book.woff") format('woff');
+}
+</style>
+	<style>
+@font-face {
+    font-family: "Isento-Light";
+    src: url("https://pageviews.arabnews.com/static_html/common/fonts/Isento-Light.woff") format('woff');
+}
+</style>
+	
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	 <script type="text/javascript">
+
+// Variable to check if fullscreen is on/off
+var db, isfullscreen = false;
+
+//following lines are for "adapt document size to window size" funtion
+  function myCallback(hypeDocument, element, event) {
+    if (isScalePossible()){
+      window.myHypeContainerId = hypeDocument.documentId();
+      $('#' + window.myHypeContainerId).css({
+        '-moz-transform-origin': '0% 0%',
+        '-webkit-transform-origin': '0% 0%',
+        '-ms-transform-origin': '0% 0%',
+        '-o-transform-origin': '0% 0%',					
+        'transform-origin': '0% 0%',
+        margin: 0
+      });
+
+      scaleSite();
+      $(window).resize(scaleSite);
+    }
+    return true;
+  }
+
+  if("HYPE_eventListeners" in window === false) {
+    window.HYPE_eventListeners = Array();
+  }
+  window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":myCallback});
+
+
+  function scaleSite()
+  {
+  	var hypeContainer = $('#' + window.myHypeContainerId);
+    var containerWidth = hypeContainer.width();
+    var containerHeight = hypeContainer.height();
+    var parentWidth = hypeContainer.parent().width();
+    var parentHeight = hypeContainer.parent().height();
+    var scaleWidth = parentWidth / containerWidth;
+    var scaleHeight = parentHeight / containerHeight;
+    var scale = Math.min(scaleWidth, scaleHeight);
+    var left = (containerWidth * scale < parentWidth) ? ((parentWidth - (containerWidth * scale)) / 2) + 'px' : '0px';
+    var top = (containerHeight * scale < parentHeight) ? ((parentHeight - (containerHeight * scale)) / 2) + 'px' : '0px' ;
+    hypeContainer.css({
+        "-moz-transform"    : "scale("+scale+")",
+        "-webkit-transform" : "scale("+scale+")",
+        "-ms-transform"     : "scale("+scale+")",
+        "-o-transform"      : "scale("+scale+")",
+        "transform"         : "scale("+scale+")",
+        "left" : left,
+        "top" : top
+    });
+  }
+
+  function isScalePossible() 
+  {
+    can = 'MozTransform' in document.body.style;
+    if(!can) can = 'webkitTransform' in document.body.style;
+    if(!can) can = 'msTransform' in document.body.style;
+    if(!can) can = 'OTransform' in document.body.style;
+    if(!can) can = 'transform' in document.body.style;
+    if(!can) can = 'Transform' in document.body.style;
+    return can;
+  }
+
+</script>
+
+
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="yemem_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:1080px;height:911px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="yemem.hyperesources/yemem_hype_generated_script.js?29930"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>
+</div>
+		<div>MINES CLEARED BY PROJECT MASAM IN YEMEN (2018-2023)</div>
+		<div></div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
